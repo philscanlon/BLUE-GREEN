@@ -4,4 +4,4 @@
 1. Install node
 2. run the flows with the command:
 
-node 
+node ./scale.json
