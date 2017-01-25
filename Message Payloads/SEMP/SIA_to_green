@@ -1,0 +1,51 @@
+<rpc semp-version="soltr/7_2VMR">
+  <message-vpn>
+   <vpn-name>default</vpn-name>
+   <rest>
+     <rest-delivery-point>
+       <name>rdp-green</name>
+       <create>
+         <queue-binding>
+           <queue-name>v1/quote-service/get-FX-rate/SIA/gbp/sgd</queue-name>
+         </queue-binding>
+       </create>
+     </rest-delivery-point>
+   </rest>
+ </message-vpn>
+</rpc>
+
+
+
+<rpc semp-version="soltr/7_2VMR">
+  <message-vpn>
+    <vpn-name>default</vpn-name>
+    <rest>
+      <rest-delivery-point>
+        <name>rdp-green</name>
+        <queue-binding>
+          <queue-name>v1/quote-service/get-FX-rate/SIA/gbp/sgd</queue-name>
+          <post-request-target>
+            <post-request-target>/v1/quote-service/get-FX-rate/SIA</post-request-target>
+          </post-request-target>
+        </queue-binding>
+      </rest-delivery-point>
+    </rest>
+  </message-vpn>
+</rpc>
+
+
+<rpc semp-version="soltr/7_2VMR">
+  <message-vpn>
+    <vpn-name>default</vpn-name>
+    <rest>
+      <rest-delivery-point>
+        <name>rdp-blue</name>
+        <no>
+          <queue-binding>
+            <queue-name>v1/quote-service/get-FX-rate/SIA/gbp/sgd</queue-name>
+          </queue-binding>
+        </no>
+      </rest-delivery-point>
+    </rest>
+  </message-vpn>
+</rpc>
