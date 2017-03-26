@@ -1,30 +1,46 @@
-# Let solace help you manage your service version cutovers in production
+# Blue-Green sample project for REST with Solace Open Data Movement
 
-In a comprehensive IT landscape typical in a bank, there are multiple layers involved in a solution such as firewalls, an API Gateway, and Web Server.
+This project provides a sample implementation of blue-green testing using the Solace REST API. The goal of this project is to demonstrate how Blue-Green concepts are supported in the Solace Open Data Movement Platform.
 
-Highly available apps that require near 100% uptime without planned outages mean that we need to have infrastructure that can run continuously without outages (even during patching) and have minimal dependencies on other components to avoid outages while shared infrastructure is patched / upgraded.
+## Contents
 
-# Blue Green Deployment
+* [Overview](#overview)
+* [Deploying the Project Yourself](#deploying-the-project-yourself)
+* [Contributing](#contributing)
+* [Authors](#authors)
+* [License](#license)
+* [Resources](#resources)
 
-Part of continuous delivery is the ability to bring in changes to the live environment in an automated and controlled manner.  We want reduce the time taken to make the change, but keep risk manageable.  Allowing multiple similar versions of a service to be live, while directing flow during a transition, allows for a change to be made, tested out on a subset of the consumer apps, and then released to all.  If there are issues with the tests, we want to be able to quickly back out the change to revert to the original service.
+## Overview
 
-# How can we solve this
+As stated this project is a sample showing how blue-green testing can be performed without an outage for cutover. The goal of this project is to form a starting point for implementing REST service routing.  
 
-Message routing allows us to achieve this through the use of subscriptions.  We can manage which service consumers use, and use topic hierarchies to cleanly manage this across a wide array of services.
+The artifacts are shared as is and are intended to be modified to fit your project requirements.
 
-# What are the advantages of this approach
+## Deploying the Project Yourself
 
-Solace allows for continuous operation of a business service during maintainence (hardware patching, upgrades, service routing) meaning the end SLA provided to the customer can be outage free.
+Please read [SETUP.md](SETUP.md)
 
-By collapsing the Gateway and app server onto the data movement platform, we gain a number of benefits:
+## Contributing
 
-multiple layers can be controlled via a single point, reducing the amount of co-ordination for a change.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-Routing can be effected either at the whole system level or down to a component level.  Want to trial a change with a small set of users, and facilitate migration of remaining service consumers
+## Authors
 
-Number of systems involved in the path, and the need to keep these systems all up to date can cause
+This sample was created by Phil Scanlon (mailto:phil.scanlon@solace.com)
 
+## License
 
+This project is licensed under the Apache License, Version 2.0. - See the [LICENSE](LICENSE) file for details.
 
+## Resources
 
-For a primer on blue green deployments, check out : http://martinfowler.com/bliki/BlueGreenDeployment.html
+For more information try these resources:
+
+- blue green deployment overview: http://martinfowler.com/bliki/BlueGreenDeployment.html
+
+For more information about Solace technology in general please visit these resources:
+
+- The Solace Developer Portal website at: http://dev.solace.com
+- Understanding [Solace technology.](http://dev.solace.com/tech/)
+- Ask the [Solace community](http://dev.solace.com/community/).
