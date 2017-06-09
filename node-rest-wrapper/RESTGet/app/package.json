@@ -1,0 +1,10 @@
+{
+  "name": "docker-solace-demo",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Solace RESTGet on AWS Linux using Docker",
+  "author": "Eric Asuncion <Eric.Asuncion@solace.com>",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
