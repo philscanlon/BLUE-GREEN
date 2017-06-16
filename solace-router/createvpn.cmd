@@ -20,20 +20,16 @@ enable
 configure
 message-spool message-vpn default
 
-create queue v1/quote-service/get-FX-rate/SIA/gbp/sgd
+create queue AA
 permission all delete
+subscription topic scale/*/*/*/AA/>
+subscription topic scale/*/*/*/AA
 no shutdown
 exit
-create queue v1/quote-service/get-FX-rate/QANTAS/sgd/aud
+create queue BB
 permission all delete
-no shutdown
-exit
-create queue v1/quote-service/get-FX-rate/TIGER/thb/sgd
-permission all delete
-no shutdown
-exit
-create queue v1/quote-service/get-FX-rate/AIRASIA/myr/sgd
-permission all delete
+subscription topic scale/*/*/*/BB/>
+subscription topic scale/*/*/*/BB
 no shutdown
 exit
 
@@ -43,31 +39,42 @@ enable
 configure
 session timeout 0
 message-vpn default
-create rest rest-delivery-point rdp-blue
+create rest rest-delivery-point blue
 client-profile "default"
-create queue-binding "v1/quote-service/get-FX-rate/SIA/gbp/sgd"
-post-request-target "/v1/quote-service/get-FX-rate"
+create queue-binding "AA"
+post-request-target "/"
 exit
-create queue-binding "v1/quote-service/get-FX-rate/QANTAS/sgd/aud"
-post-request-target "/v1/quote-service/get-FX-rate"
+create queue-binding "BB"
+post-request-target "/"
 exit
-create queue-binding "v1/quote-service/get-FX-rate/TIGER/thb/sgd"
-post-request-target "/v1/quote-service/get-FX-rate"
-exit
-create queue-binding "v1/quote-service/get-FX-rate/AIRASIA/myr/sgd"
-post-request-target "/v1/quote-service/get-FX-rate"
-exit
-create rest-consumer "blueConsumer"
+
+create rest-consumer "scale_a_blue"
 authentication auth-scheme "none"
 no authentication http-basic username
 no local interface
-remote host "192.168.56.1"
+remote host "10.198.37.53"
 remote max-post-wait-time 30
 remote outgoing-connection-count 3
-remote port 1880
+remote port 1881
 remote retry delay 3
 no shutdown
 exit
+
+create rest-consumer "scale_b_blue"
+authentication auth-scheme "none"
+no authentication http-basic username
+no local interface
+remote host "10.198.37.53"
+remote max-post-wait-time 30
+remote outgoing-connection-count 3
+remote port 1882
+remote retry delay 3
+no shutdown
+exit
+
+
+
+
 no shutdown
 exit
 
@@ -77,17 +84,18 @@ enable
 configure
 session timeout 0
 message-vpn default
-create rest rest-delivery-point rdp-green
+create rest rest-delivery-point green
 client-profile "default"
+
 !  create queue bindings
-create rest-consumer "greenConsumer"
+create rest-consumer "scale_a_green"
 authentication auth-scheme "none"
 no authentication http-basic username
 no local interface
-remote host "192.168.56.1"
+remote host "127.0.0.1"
 remote max-post-wait-time 30
 remote outgoing-connection-count 3
-remote port 1880
+remote port 1882
 remote retry delay 3
 no shutdown
 exit
