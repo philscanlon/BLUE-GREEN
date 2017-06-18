@@ -1,0 +1,14 @@
+<rpc semp-version="soltr/8_3VMR">
+ <message-vpn>
+  <vpn-name>default</vpn-name>
+  <rest>
+    <rest-delivery-point>
+      <name>green</name>
+        <rest-consumer>
+          <name>scale_b_green</name>
+          <shutdown/>
+        </rest-consumer>
+    </rest-delivery-point>
+  </rest>
+</message-vpn>
+</rpc>

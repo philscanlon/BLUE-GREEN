@@ -1,0 +1,16 @@
+<rpc semp-version="soltr/8_3VMR">
+  <message-vpn>
+    <vpn-name>default</vpn-name>
+    <rest>
+      <rest-delivery-point>
+        <name>green</name>
+        <queue-binding>
+          <queue-name>FY</queue-name>
+          <post-request-target>
+            <post-request-target>/</post-request-target>
+          </post-request-target>
+        </queue-binding>
+      </rest-delivery-point>
+    </rest>
+  </message-vpn>
+</rpc>

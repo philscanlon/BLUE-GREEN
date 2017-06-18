@@ -1,0 +1,15 @@
+<rpc semp-version="soltr/8_3VMR">
+  <show>
+    <message-vpn>
+    <vpn-name>*</vpn-name>
+    <rest/>
+    <rest-delivery-point/>
+    <rdp-name>*</rdp-name>
+    <queue-binding/>
+    <queue-binding-name>*</queue-binding-name>
+    <count/>
+    <num-elements>50</num-elements>
+    <detail/>
+  </message-vpn>
+</show>
+</rpc>

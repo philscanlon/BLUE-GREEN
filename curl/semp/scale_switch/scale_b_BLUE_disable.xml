@@ -3,12 +3,11 @@
   <vpn-name>default</vpn-name>
   <rest>
     <rest-delivery-point>
-      <name>green</name>
-      <create>
-        <queue-binding>
-          <queue-name>BB</queue-name>
-        </queue-binding>
-      </create>
+      <name>blue</name>
+        <rest-consumer>
+          <name>scale_b_blue</name>
+          <shutdown/>
+        </rest-consumer>
     </rest-delivery-point>
   </rest>
 </message-vpn>

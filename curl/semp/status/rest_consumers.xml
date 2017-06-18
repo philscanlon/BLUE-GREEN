@@ -1,0 +1,12 @@
+<rpc semp-version="soltr/8_3VMR">
+  <show>
+    <message-vpn>
+      <vpn-name>*</vpn-name>
+      <rest/>
+      <rest-consumer/>
+      <rest-consumer-name>*</rest-consumer-name>
+      <count/>
+      <num-elements>10</num-elements>
+  </message-vpn>
+  </show>
+</rpc>

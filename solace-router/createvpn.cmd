@@ -23,13 +23,11 @@ message-spool message-vpn default
 create queue AA
 permission all delete
 subscription topic scale/*/*/*/AA/>
-subscription topic scale/*/*/*/AA
 no shutdown
 exit
-create queue BB
+create queue FY
 permission all delete
-subscription topic scale/*/*/*/BB/>
-subscription topic scale/*/*/*/BB
+subscription topic scale/*/*/*/FY/>
 no shutdown
 exit
 
@@ -44,7 +42,7 @@ client-profile "default"
 create queue-binding "AA"
 post-request-target "/"
 exit
-create queue-binding "BB"
+create queue-binding "FY"
 post-request-target "/"
 exit
 

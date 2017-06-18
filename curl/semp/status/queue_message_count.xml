@@ -1,0 +1,9 @@
+<rpc semp-version="soltr/8_3VMR">
+ <show>
+  <queue>
+      <name>*</name>
+      <count/>
+     <num-elements>100</num-elements>
+</queue>
+</show>
+</rpc>

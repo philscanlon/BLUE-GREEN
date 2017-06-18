@@ -1,0 +1,7 @@
+<rpc semp-version="soltr/8_3VMR">
+  <show>
+      <client>
+          <name>*</name>
+      </client>
+  </show>
+</rpc>
