@@ -42,6 +42,20 @@
       </rest-delivery-point>
     </rest>
   </message-vpn>
+</rpc>]]></con:request><con:originalUri>http://192.168.56.101/SEMP</con:originalUri><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="AA_BLUE_ADD_QB" id="723f7859-fac8-45ad-b6b2-07efc35cb82b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://192.168.56.51:8080</con:endpoint><con:request><![CDATA[<rpc semp-version="soltr/7_2VMR">
+  <message-vpn>
+   <vpn-name>default</vpn-name>
+   <rest>
+     <rest-delivery-point>
+       <name>blue</name>
+       <create>
+         <queue-binding>
+           <queue-name>AA</queue-name>
+         </queue-binding>
+       </create>
+     </rest-delivery-point>
+   </rest>
+ </message-vpn>
 </rpc>]]></con:request><con:originalUri>http://192.168.56.101/SEMP</con:originalUri><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="SEMP-QueueBinding-SIA_TO_GREEN" path="/SEMP" id="e4205eaa-9760-4b08-bcd8-0108155a3140"><con:settings/><con:parameters/><con:method name="SEMP" id="aef532c4-b4e2-4fbd-9ab1-0e47098b8b91" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/><con:element>rpc</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/xml; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>rpc-reply</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="SIA_GREEN_ADD_QB" id="723f7859-fac8-45ad-b6b2-07efc35cb82b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://192.168.56.51:8080</con:endpoint><con:request><![CDATA[<rpc semp-version="soltr/7_2VMR">
   <message-vpn>
    <vpn-name>default</vpn-name>
