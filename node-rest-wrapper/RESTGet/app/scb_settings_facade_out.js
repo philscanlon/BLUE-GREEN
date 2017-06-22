@@ -155,7 +155,7 @@ module.exports = {
         // octalbonescript:require('octalbonescript'),
         // jfive:require("johnny-five"),
         // j5board:require("johnny-five").Board({repl:false})
-	scb_actual_host:'http://127.0.0.1:1981'
+	scb_actual_host:'http://192.168.56.1:1981'
     },
 
     // The following property can be used to order the categories in the editor

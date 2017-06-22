@@ -155,7 +155,7 @@ module.exports = {
         // octalbonescript:require('octalbonescript'),
         // jfive:require("johnny-five"),
         // j5board:require("johnny-five").Board({repl:false})
-	solace_host:'http://192.168.56.1:9000',
+	solace_host:'http://192.168.56.51:9000',
 	solace_timeout:'3000'
     },
 

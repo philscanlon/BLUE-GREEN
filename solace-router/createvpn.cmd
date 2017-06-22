@@ -70,9 +70,6 @@ remote retry delay 3
 no shutdown
 exit
 
-
-
-
 no shutdown
 exit
 
@@ -93,10 +90,25 @@ no local interface
 remote host "127.0.0.1"
 remote max-post-wait-time 30
 remote outgoing-connection-count 3
+remote port 1881
+remote retry delay 3
+no shutdown
+exit
+
+create rest-consumer "scale_b_green"
+authentication auth-scheme "none"
+no authentication http-basic username
+no local interface
+remote host "127.0.0.1"
+remote max-post-wait-time 30
+remote outgoing-connection-count 3
 remote port 1882
 remote retry delay 3
 no shutdown
 exit
+
+
+
 no shutdown
 exit
 
