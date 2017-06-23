@@ -5,3 +5,8 @@ http://docs.solace.com/SEMP/Using-Legacy-SEMP.htm?Highlight=SEMP
 
 
 https://www.freeformatter.com/xml-validator-xsd.html
+
+
+// scale b to green
+
+// AA to green
