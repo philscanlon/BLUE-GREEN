@@ -38,6 +38,10 @@ Test using curl:
 
 curl -k -vvvv -X GET --cert client_keystore.p12:<your password> https://192.168.88.131:1880/scale/a/b/c/AA -H "content-type: application/json" -H "SCALE_HMAC: Uowo1JlSgBm1fsROx2ubBF+49Acu7DzAeUxS1u9F8Fo=“
 
+curl -k -vvvv -X GET --cert ./client_keystore.p12:scale https://127.0.0.1:1880/scale/a/b/c/AA -H "content-type: application/json" -H "SCALE_HMAC: Uowo1JlSgBm1fsROx2ubBF+49Acu7DzAeUxS1u9F8Fo=“
+
+
+
 NOTE: if running on MAC OSX, you will need to add public/certificate.pem & public/client/client_certificate.pem to your KeyChain Certificates, else curl will return an error something like this "curl: (35) error reading X.509 potentially-encrypted key file: Error in parsing”. This is a known MAC OSX issue.
 
 
