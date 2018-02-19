@@ -17,4 +17,7 @@ Setup order:
 1. node-red-wwapper/RESTGet/start_backend.sh
 2. SEMP_V2/readme.md
 3. curl/semp/status/status.sh
-4. 
+
+## Notes
+[bug] Need to activate the endpoints after creation
+[bug] router mode (gateway) must be set

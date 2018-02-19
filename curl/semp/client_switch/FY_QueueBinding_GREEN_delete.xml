@@ -6,7 +6,7 @@
         <name>green</name>
         <no>
           <queue-binding>
-            <queue-name>BB</queue-name>
+            <queue-name>FY</queue-name>
           </queue-binding>
         </no>
       </rest-delivery-point>

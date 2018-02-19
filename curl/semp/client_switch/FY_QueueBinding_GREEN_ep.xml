@@ -5,7 +5,7 @@
       <rest-delivery-point>
         <name>green</name>
         <queue-binding>
-          <queue-name>BB</queue-name>
+          <queue-name>FY</queue-name>
           <post-request-target>
             <post-request-target>/</post-request-target>
           </post-request-target>
