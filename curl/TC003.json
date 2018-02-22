@@ -1,0 +1,25 @@
+{
+"msgUid": "e0d63ba9-9735-4229-a8e4-58e6b04d1ced",
+"transactions":
+[
+  {
+  "clientID": "XYZ",
+  "clientRequestID": "XYZ-TRAN-ID1",
+  "clientRequestTime": 1443120639000,
+  "rateQuoteID": "XYZ-1LX3XUS5K0GT9",
+  "bookingAccountAlias": "XYZ E1 MY G11 Trades",
+  "buyAmount": 100.0,
+  "clientRef1": "ref1",
+  "clientRef2": "ref2",
+  "clientRef3": "ref3"
+},
+{
+"clientID": "XYZ",
+"clientRequestID": "XYZ-TRAN-ID2",
+ "clientRequestTime": 1443120639000,
+  "rateQuoteID": "XYZ-1LX3XUS5K0GT9",
+   "bookingAccountAlias": "XYZ E2 MY G11 Trades",
+    "sellAmount": 201.0
+}
+]
+}

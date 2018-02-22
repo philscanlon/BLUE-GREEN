@@ -1,0 +1,18 @@
+usage: functional_test.sh username password host port
+Press [CTRL+C] to stop..
+TC001 - asterisk end of url
+curl -X GET -u admin:admin e40:9000/scale/v1/quotes-service/get-quotes/AA/*
+<solace-error-response>
+<code>400</code>
+<reason><![CDATA[Invalid Request-Target]]></reason>
+<detail><![CDATA[
+Request-target cannot contain "*"
+]]></detail>
+<internal-use>1:2013</internal-use>
+</solace-error-response>
+TC002
+curl -X GET -u admin:admin e40:9000/scale/v1/quotes-service/get-quotes/AA/?time=1
+TC003 post transactions
+curl -X POST -u admin:admin e40:9000/scale/v1/transactions-service/post-transactions/AA
+SyntaxError: Unexpected token } in JSON at position 537<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at parse (/home/pscanlon/node-red/node_modules/body-parser/lib/types/json.js:88:17)<br> &nbsp; &nbsp;at /home/pscanlon/node-red/node_modules/body-parser/lib/read.js:116:18<br> &nbsp; &nbsp;at invokeCallback (/home/pscanlon/node-red/node_modules/body-parser/node_modules/raw-body/index.js:262:16)<br> &nbsp; &nbsp;at done (/home/pscanlon/node-red/node_modules/body-parser/node_modules/raw-body/index.js:251:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (/home/pscanlon/node-red/node_modules/body-parser/node_modules/raw-body/index.js:307:7)<br> &nbsp; &nbsp;at emitNone (events.js:86:13)<br> &nbsp; &nbsp;at IncomingMessage.emit (events.js:185:7)<br> &nbsp; &nbsp;at endReadableNT (_stream_readable.js:974:12)<br> &nbsp; &nbsp;at _combinedTickCallback (internal/process/next_tick.js:74:11)<br> &nbsp; &nbsp;at process._tickCallback (internal/process/next_tick.js:98:9)
+{ "Message": "[Success] url: /scale/v1/quotes-service/get-quotes/AA/?time=1, host: 192.168.1.228:1983, colour: blue, time: Thu Feb 22 2018 03:38:09 GMT-0500 (EST)" }
