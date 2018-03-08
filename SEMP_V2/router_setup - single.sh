@@ -7,7 +7,7 @@ echo "Press [CTRL+C] to stop.."
 SEMP is used to manage router configuration.
 
 # use a variable for the Solace Router HOST before running the CURL commands
-export vmr_ip=e40
+export vmr_ip=localhost
 export backend_ip=192.168.1.228
 
 # Set the REST VPN to gateway
@@ -23,7 +23,7 @@ curl -X POST -u admin:admin $vmr_ip:8080/SEMP/v2/config/msgVpns/default/queues/A
 curl -X POST -u admin:admin $vmr_ip:8080/SEMP/v2/config/msgVpns/default/restDeliveryPoints -H "content-type: application/json" -d '{"restDeliveryPointName":"aa", "enabled":true}'
 
 # Queue Binding
-curl -X POST -u admin:admin $vmr_ip:8080/SEMP/v2/config/msgVpns/default/restDeliveryPoints/blue/queueBindings  -H "content-type: application/json" -d '{"msgVpnName":"default","queueBindingName":"AA","restDeliveryPointName":"aa","postRequestTarget":"/"}'
+curl -X POST -u admin:admin $vmr_ip:8080/SEMP/v2/config/msgVpns/default/restDeliveryPoints/aa/queueBindings  -H "content-type: application/json" -d '{"msgVpnName":"default","queueBindingName":"AA","restDeliveryPointName":"aa","postRequestTarget":"/"}'
 
 #Rest Consumer target URL http://backend-server:port/get/AA
-curl -X POST -u admin:admin $vmr_ip:8080/SEMP/v2/config/msgVpns/default/restDeliveryPoints/blue/restConsumers  -H "content-type: application/json" -d '{"msgVpnName":"default","restConsumerName":"backend_aa" ,"restDeliveryPointName":"aa" ,"remoteHost":"'"$backend_ip"'","remotePort":1981, "tlsEnabled":false, "enabled":true}'
+curl -X POST -u admin:admin $vmr_ip:8080/SEMP/v2/config/msgVpns/default/restDeliveryPoints/aa/restConsumers  -H "content-type: application/json" -d '{"msgVpnName":"default","restConsumerName":"backend_aa" ,"restDeliveryPointName":"aa" ,"remoteHost":"'"$backend_ip"'","remotePort":1981, "tlsEnabled":false, "enabled":true}'
